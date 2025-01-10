@@ -385,3 +385,45 @@
   padding: 4px 15px;
   border-radius: 16px;
 }
+
+/* ////////////////////////////// */
+
+.btn.play {
+  background-color: blue;
+  color: white;
+}
+
+.btn.discard {
+  background-color: red;
+  color: white;
+}
+
+.card-hand {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hand.selected {
+  transform: translateY(-10px); /* Thẻ di chuyển lên trên */
+}
+
+.scoring-table .card-hand {
+  height: 150px; /* Giữ nguyên chiều cao như trong .hand */
+  margin: 5px; /* Khoảng cách giữa các thẻ bài */
+  transform: none; /* Loại bỏ hiệu ứng nhảy lên nếu cần */
+  transition: none; /* Loại bỏ mọi hiệu ứng nếu không cần */
+}
+
+.scoring-table .card-hand {
+  animation: slide-up 0.5s ease forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -136,3 +136,72 @@
     </div>
   </body>
 </html>
+
+<script>
+  // Select elements
+  const cardHands = document.querySelectorAll(".card-hand");
+  const playButton = document.querySelector(".btn:nth-child(1)"); // Play Hand
+  const discardButton = document.querySelector(".btn:nth-child(3)"); // Discard
+  const scoreDisplay = document.querySelector(".score-0");
+  const scoringTable = document.querySelector(".scoring-table");
+
+  let selectedCards = [];
+
+  // Event for card selection
+  cardHands.forEach((card, index) => {
+    card.addEventListener("click", () => {
+      if (selectedCards.includes(index)) {
+        // Deselect card
+        card.classList.remove("selected");
+        selectedCards = selectedCards.filter((i) => i !== index);
+      } else if (selectedCards.length < 5) {
+        // Select card (limit 5)
+        card.classList.add("selected");
+        selectedCards.push(index);
+      } else {
+        alert("Bạn chỉ được chọn tối đa 5 lá bài!");
+      }
+
+      // Update button styles based on selection
+      if (selectedCards.length > 0) {
+        playButton.classList.add("play");
+        discardButton.classList.add("discard");
+      } else {
+        playButton.classList.remove("play");
+        discardButton.classList.remove("discard");
+      }
+    });
+  });
+
+  // Event for "Play Hand"
+  playButton.addEventListener("click", () => {
+    if (selectedCards.length > 0) {
+      let totalScore = 0;
+
+      // Move cards to scoring table and calculate score
+      selectedCards.sort((a, b) => b - a); // Sort descending to avoid index shifting
+      selectedCards.forEach((index) => {
+        const card = cardHands[index];
+
+        // Clone card for scoring table
+        const clonedCard = card.cloneNode(true);
+        clonedCard.classList.add("scored-card");
+        scoringTable.appendChild(clonedCard);
+
+        // Remove card from hand
+        card.remove();
+
+        totalScore += 11; // Each card = 11 points
+      });
+
+      // Reset selection and update score
+      selectedCards = [];
+      scoreDisplay.textContent =
+        parseInt(scoreDisplay.textContent) + totalScore;
+
+      // Reset button styles
+      playButton.classList.remove("play");
+      discardButton.classList.remove("discard");
+    }
+  });
+</script>

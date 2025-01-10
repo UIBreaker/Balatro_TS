@@ -1,0 +1,387 @@
+* {
+  box-sizing: border-box;
+}
+
+.game-main {
+  background-color: #3e785f;
+  /* background-image: url(/assets/img/balatro-background.jpg); */
+}
+
+.game-panel {
+  display: flex;
+}
+
+.panel-left {
+  background-color: #2e3639;
+  height: 626px;
+  width: 200px;
+  margin-left: 35px;
+  border: 3px solid #0262a4;
+  border-top: none;
+  border-bottom: none;
+}
+
+.panel-left .score-lever {
+  background-color: #0062a3;
+  margin-top: 30px;
+  /* padding: 12px; */
+  padding: 12px 0px;
+  padding-left: 45px;
+  border-radius: 16px;
+  margin: 5px 4px;
+  margin-top: 60px;
+  color: #fff;
+}
+
+.panel-right {
+  background-color: #3e785f;
+  /* background-image: url(/assets/img/balatro-background.jpg); */
+  width: 1200px;
+}
+
+.panel-right .comsumable-left,
+.comsumable-right {
+  background-color: #3e785f;
+  border: 3px dashed gray;
+}
+
+.top-row-comsumable {
+  display: flex;
+  margin-top: 45px;
+  margin-left: 30px;
+}
+
+.comsumable-left {
+  width: 700px;
+}
+
+.comsumable-right {
+  margin-left: 20px;
+  width: 300px;
+}
+
+.comsumable-left,
+.comsumable-right {
+  height: 120px;
+  border-radius: 16px;
+}
+
+.scoring-table {
+  /* background-color: blanchedalmond; */
+  border: 3px dashed gray;
+
+  margin-top: 30px;
+  border-radius: 16px;
+  height: 155px;
+  margin-left: 30px;
+  margin-right: 105px;
+}
+
+.hand {
+  display: flex;
+  margin-left: 200px;
+  margin-top: 10px;
+}
+
+.hand .card-hand {
+  margin-left: -20px;
+  height: 150px;
+}
+
+.button-Playhand-discard .btn-row {
+  display: flex;
+  margin-left: 227px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.button-Playhand-discard .btn-row .btn {
+  margin: 0px 20px;
+}
+
+.btn {
+  background-color: #4f5251;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.score-at-least {
+  height: 110px;
+  display: flex;
+  color: white;
+  background-color: #10405a;
+  padding: 12px 0px;
+  padding-left: 10px;
+  border-radius: 16px;
+  margin: 5px 4px;
+}
+
+.score-at-least .circle-blind {
+  background-color: #233e9e;
+  margin-right: 5px;
+  font-size: 10px;
+  align-items: center;
+  width: 60px; /* Đường kính hình tròn */
+  height: 60px; /* Đường kính hình tròn */
+  color: #fff; /* Màu chữ */
+  border-radius: 50%; /* Tạo hình tròn */
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  align-items: center; /* Căn giữa theo trục dọc */
+  justify-content: center; /* Căn giữa theo trục ngang */
+  text-align: center; /* Căn giữa văn bản nếu cần */
+  font-weight: bold; /* In đậm chữ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo hiệu ứng đổ bóng (tùy chọn) */
+  border: 1px solid black;
+  margin-top: 8px;
+}
+
+.score-at-least-panel {
+  width: 100px;
+  background-color: #1f2d2e;
+  border-radius: 16px;
+}
+
+.reward,
+.score-at-least-panel .title {
+  font-size: 10px;
+  margin-top: 10px;
+  margin-left: 25px;
+  font-weight: 600;
+}
+
+.target-score-block {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-top: 4px;
+}
+
+.target-score-block .while-stack {
+  height: 20px;
+  width: 20px;
+  /* background-color: #1e2b2d; */
+  margin-right: 5px;
+}
+
+.target-score-block .target-score {
+  font-size: 20px;
+  color: #f4493f;
+}
+
+.Reward-block {
+  display: flex;
+  align-items: center;
+}
+
+.Reward-block .gold {
+  height: 10px;
+  width: 10px;
+}
+
+.Reward-block .gold-reward {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.Round-score {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: #1b262a;
+  /* padding: 12px; */
+  padding: 12px 0px;
+  border-radius: 16px;
+  margin: 5px 4px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.Round-score .title {
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  background-color: #2c393b;
+  padding: 10px;
+  margin-left: 20px;
+  width: 85px;
+  border-radius: 16px;
+}
+
+.score-row .while-stack {
+  height: 20px;
+  width: 20px;
+  /* background-color: #1e2b2d; */
+  margin-right: 5px;
+}
+
+.score-0 {
+  font-size: 20px;
+}
+
+.cap {
+  background-color: #172325;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin: 5px 4px;
+  padding: 12px 0;
+}
+
+.ctc {
+  display: flex;
+  align-items: center;
+  margin-bottom: -5px;
+}
+
+.core {
+  height: 20px;
+  width: 20px;
+}
+
+.ctc .ctcAdd {
+  background-color: #008bf1;
+}
+.ctc .ctcMult {
+  background-color: #f34b40;
+}
+
+.ctcAdd,
+.ctcMult {
+  padding: 12px 34px;
+  border-radius: 16px;
+}
+
+.cap .Display {
+  margin-bottom: 20px;
+  padding: 12px 34px;
+}
+
+.ctc .ctc-scoreADD {
+  margin-right: auto;
+}
+
+.monney-info .gold {
+  height: 10px;
+  width: 10px;
+}
+
+.anteAndround,
+.handAnddiscard,
+.info-game {
+  display: flex;
+}
+
+.info-game {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.setting-info {
+  margin-left: -5px;
+  margin-right: 5px;
+}
+
+.setting-info .run-info {
+  background-color: #f5493f;
+  margin-bottom: 10px;
+  padding: 25px 10px;
+  border-radius: 8px;
+}
+
+.setting-info .option {
+  background-color: #f19501;
+  padding: 30px 10px;
+  border-radius: 8px;
+}
+.setting-info .run-info,
+.setting-info .option {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Ante,
+.discard-info,
+.hands-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2629;
+  padding: 4px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.hands-info,
+.Ante {
+  margin-right: 10px;
+}
+
+.monney-info {
+  margin-right: 10px;
+}
+
+.Round {
+  margin-right: 10px;
+}
+
+.info-ingame .hands-info {
+  margin-right: 5px;
+}
+
+.info-game .monney-info {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.info-game .Round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2629;
+  padding: 4px;
+  margin-bottom: 15px;
+  margin-left: 4px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.handAnddiscard {
+  margin-bottom: 10px;
+}
+
+.Hands,
+.Discard,
+.Ante-so,
+.Round-so {
+  background-color: #2e3a3c;
+  padding: 0px 7px;
+  border-radius: 16px;
+}
+
+.monney-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2629;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.monney-info-block {
+  background-color: #2e3a3c;
+  padding: 4px 15px;
+  border-radius: 16px;
+}

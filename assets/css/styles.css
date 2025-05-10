@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden; /* Ẩn scroll theo chiều dọc (tạm thời để test) */
+}
+
 .game-main {
   background-color: #3e785f;
   /* background-image: url(/assets/img/balatro-background.jpg); */
@@ -9,11 +21,12 @@
 
 .game-panel {
   display: flex;
+  padding-bottom: 31px;
 }
 
 .panel-left {
   background-color: #2e3639;
-  height: 626px;
+  height: 658px;
   width: 200px;
   margin-left: 35px;
   border: 3px solid #0262a4;
